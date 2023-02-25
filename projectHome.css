@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#iran {
+    position: absolute;
+    left: 3%;
+    top: 8%;
+}
+
+#img-iran {
+    width: 200px;
+    height: 100px;
+}
+
+.card {
+    width: 23%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+#code-bar {
+    height: 70px;
+    background-color: rgb(184, 183, 183);
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+    padding: 20px;
+    opacity: 0.9;
+    top: -70px;
+    transition: 0.3s;
+}
+
+.card:hover #code-bar {
+    top: 0px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#button-download {
+    box-shadow: 1px 4px 5px 1px gray;
+    transition: 0.3s;
+}
+
+.button-go {
+    background-color: aqua;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.button-go>a {
+    color: black;
+}
+
+#button-download:hover {
+    background-color: aqua !important;
+}
+
+#button-download>a {
+    text-decoration: none;
+    color: black;
+}
+
+#img-card {
+    width: 100%;
+    height: 300px;
+}
+
+#btn-go-to-top {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    display: none;
+}
+.btn-group{
+    margin: 10px 20px;
+}
+#parent-group{
+    display: flex;
+    justify-content: space-between;
+}
+.slide {
+    overflow: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.h3-card {
+    text-align: center;
+}
+
+.slide::-webkit-scrollbar {
+    display: none;
+}
+
+.class-parent {
+    animation: load 1s;
+}
+
+#header-text {
+    animation: loadRotatehead 1.5s;
+    transform-origin: right;
+}
+
+.btn1{
+    animation: loadRotatebtn 1.5s;
+}
+
+#select-item{
+    max-height: 100px;
+}
+
+#fixed-alert {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+#alert {
+    border-radius: 15px;
+    padding: 10px 50px;
+    background-color: chartreuse;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -50px;
+
+}
+
+#header {
+    position: relative;
+    background-color: white;
+}
+
+#time {
+    position: absolute;
+    left: 20%;
+    bottom: 5px;
+    font-size: 25px;
+}
+
+#day {
+    position: absolute;
+    left: 70%;
+    bottom: 5px;
+    font-size: 25px;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid green;
+    background-color: rgb(178, 178, 178);
+}
+
+footer>h1 {
+    padding: 50px 0;
+}
+
+#alert-reset{
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    z-index: 5;
+    opacity: 0;
+}
+
+.animation-alert{
+    animation: alert 4s;
+}
+
+@media(max-width:1200px) {
+    #btn-go-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media(max-width:900px) {
+    .card {
+        width: 45% !important;
+    }
+
+    #btn-go-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .card {
+        width: 50% !important;
+    }
+
+    #btn-go-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media(max-width:580px) {
+    .card {
+        width: 60% !important;
+    }
+
+    #btn-go-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes alert {
+    0% {
+        opacity: 1;
+        transform: rotateY(90deg);
+    }
+
+    50% {
+        transform: rotateY(0deg);
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes loadRotatehead {
+    0% {
+        transform: rotateY(90deg);
+        transform: scale(0);
+    }
+
+    100% {
+        transform: rotateY(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes loadRotatebtn {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="projectHome.css">
+    <link rel="stylesheet" href="./icons-1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+    <title> کتاب درسی PDF</title>
+</head>
+
+<body dir="rtl" class="bg-light">
+    <div id="scrollBarTop" style="width: 0; position: fixed;height: 3px; background-color: blue; z-index: 5;"></div>
+    
+    <div id="alert-reset" class="alert alert-success fade show w-100" role="alert">
+      نتیجه جستوجو پاک شد
+    </div>
+    <!-- <div id="fixed-alert"></div> -->
+    <div id="header">
+        <h1 id="header-text" class="w-100 text-center py-4">کتاب درسی خود را از اینجا بگیرید</h1>
+        <!-- <div id="iran">
+            <img id="img-iran" src="image/open/iran.jpg" alt="پرچم ایران">
+        </div> -->
+        <div id="time">
+            <span class="time-item3">0</span>
+            <span id="time-dot">:</span>
+            <span class="time-item2">0</span>
+            <span id="time-dot">:</span>
+            <span class="time-item1">0</span>
+        </div>
+        <div id="day">
+            <span class="day-item"></span>
+        </div>
+        <br>
+        <hr>
+    </div>
+    <main id="main" class="container h-100">
+        <h2 style="text-align: center;"> ابتدایی و متوسطه اول</h2>
+        <hr>
+        <div>
+            <button id="class-1" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-one">کلاس اول</a></button>
+            <button id="class-2" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-tow">کلاس دوم</a></button>
+            <button id="class-3" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-three">کلاس سوم</a></button>
+            <button id="class-4" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-four">کلاس چهارم</a></button>
+            <button id="class-5" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-five">کلاس پنجم</a></button>
+            <button id="class-6" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-six">کلاس ششم</a></button>
+            <button id="class-7" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-seven">کلاس هفتم</a></button>
+            <button id="class-8" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-eight">کلاس هشتم</a></button>
+            <button id="class-9" class="button-go btn btn-outline-primary col-2 mx-3 btn1"><a href="#class-nine">کلاس نهم</a></button>
+        </div><br>
+
+         <h2 style="text-align: center;">متوسطه دوم</h2>
+         <hr>
+         <div id="parent-select">
+         <label for="select-item">انتخاب رشته:</label>
+         <select id="select-item" class="form-select btn1">
+          <option value="" selected>انتخاب کنید</option>
+            <option value="متوسطه نظری">متوسطه نظری</option>
+            <option value="فنی و حرفه ای">فنی و حرفه ای</option>
+            <option value="کار و دانش">کار و دانش</option>
+            <option value="جغرافیای استان ها">جغرافیای استان ها</option>
+         </select><br>
+         </div>
+         <div>
+          <button id="btn-search" class="btn btn-outline-primary me-4">جستوجو</button>
+          <button id="btn-reset" class="btn btn-outline-danger">پاک کردن نتیجه جستوجو</button>
+         </div>
+        <hr>
+       <!-- <div id="class-one" class="class-parent">
+             <h3 class="bg-success text-light rounded-3 p-2 h3-card">کلاس اول</h3>
+            <hr>
+            <div id="slide-one" class="slide border-3"> 
+                 <div class="card">
+                    <div id="code-bar">کد کتاب:102</div>
+                    <div class="card-img text-center">
+                        <img src="image/tow/ریاضی.gif" id="img-card" alt="ریاضی اول">
+                    </div>
+                    <h5 class="card-title text-center"> ریاضی (اول)</h5>
+                    <button id="button-download" class="bg-info border-0 w-50 rounded-3 p-1 m-auto my-3">
+                        <a href="file/tow/هدیه های آسمانی (ویژه اهل سنت).pdf" download>دانلود</a></button>
+                </div> 
+             </div>
+        </div> -->
+
+        <div id="class-all" class="class-parent">
+          <!-- code -->
+        </div>
+    </main>
+    <footer>
+        <h1 class="text-success">توسعه یافته توسط: مصطفی مومنی</h1>
+        <h3>ایمیل: mostafa.m.ir.221@gmail.com</h3>
+    </footer>
+    <button id="btn-go-to-top" class="bg-transparent"><i class="bi bi-caret-up"></i></button>
+    <script src="projectHome.js"></script>
+    <script src="projectObject.js"></script>
+</body>
+
+</html>
