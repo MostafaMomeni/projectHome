@@ -412,7 +412,7 @@ function danesh(item){
     else if(item == "خدمات"){
         parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamat1(this.value)" id="select-item" class="form-select sel2 btn1">
         <option value="" selected>انتخاب کنید</option>
-        <option value=" خدمات"> خدما</option>
+        <option value="خدمات">خدمات</option>
         <option value="بازرگانی و امور اداری"> بازرگانی و امور اداری</option>
         <option value=" بهداشت و سلامت"> بهداشت و سلامت</option>
         </select><br class="sel2">
@@ -535,7 +535,7 @@ function ChangeDaneshSaneat1(item){
         <option value="عیب یابی و مونتاژ سیستم های رایانه ای">عیب یابی و مونتاژ سیستم های رایانه ای</option>
         <option value="ماشین های الکتریکی">ماشین های الکتریکی</option>
         <option value="تولید و توسعه دهنده پایگاه های اینترنتی">تولید و توسعه دهنده پایگاه های اینترنتی</option>
-        <option value="تولید کننده و چند رسانه ای">تولید کننده و چند رسانه ای</option>
+        <option value="تولید کننده چند رسانه ای">تولید کننده چند رسانه ای</option>
         <option value="الکترونیک صنعتی">الکترونیک صنعتی</option>
         <option value="برنامه نویسی بازی های رایانه ای">برنامه نویسی بازی های رایانه ای</option>
         <option value="اتوماسیون صنعتی">اتوماسیون صنعتی</option>
@@ -553,30 +553,671 @@ function ChangeDaneshSaneat1(item){
      `)
     }
     else if(item == "معماری و ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhteman1(this.value)" id="select-item" class="form-select sel3 btn1">
         <option value="" selected>انتخاب کنید</option>
-        <option value="دهم">دهم</option>
-        <option value="یازدهم">یازدهم</option>
-        <option value="دوازدهم">دوازدهم</option>
+        <option value="کار های عمومی ساختمان">کار های عمومی ساختمان</option>
+        <option value="کار های فلزی ساختمان">کار های فلزی ساختمان</option>
+        <option value="تزیینات داخلی ساختمان">تزیینات داخلی ساختمان</option>
+        <option value="نقشه کشی ساختمان">نقشه کشی ساختمان</option>
+        <option value="سنگ کاری و کاشی کاری">سنگ کاری و کاشی کاری</option>
+        <option value="معماری آینه کاری">معماری آینه کاری</option>
         </select><br class="sel3">
      `)
     }
     else if(item == "گروه مواد"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMavad1(this.value)" id="select-item" class="form-select sel3 btn1">
         <option value="" selected>انتخاب کنید</option>
-        <option value="دهم">دهم</option>
-        <option value="یازدهم">یازدهم</option>
-        <option value="دوازدهم">دوازدهم</option>
+        <option value="ریخته گری">ریخته گری</option>
+        <option value="آبکاری فلزات">آبکاری فلزات</option>
+        <option value="نساجی عمومی">نساجی عمومی</option>
         </select><br class="sel3">
      `)
     }
     else if(item == "گروه مکانیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMecanic1(this.value)" id="select-item" class="form-select sel3 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="فرز کاری CNC">فرز کاری CNC</option>
+        <option value="ساخت مصنوعات فلزی">ساخت مصنوعات فلزی</option>
+        <option value="روکش کاری چوبی">روکش کاری چوبی</option>
+        <option value="مبل سازی مدرن">مبل سازی مدرن</option>
+        <option value="چاپ افست">چاپ افست</option>
+        <option value="مدلسازی">مدلسازی</option>
+        <option value="مبل سازی کلاسیک">مبل سازی کلاسیک</option>
+        <option value="رنگ کاری مبلمان چوبی">رنگ کاری مبلمان چوبی</option>
+        <option value="تعمیر خودرو های تجاری">تعمیر خودرو های تجاری</option>
+        <option value="جوشکاری برق">جوشکاری برق</option>
+        <option value="تزیینات داخلی چوبی">تزیینات داخلی چوبی</option>
+        <option value="در و پنجره سازی چوبی">در و پنجره سازی چوبی</option>
+        <option value="خدمات پس از فروش خودرو های سبک">خدمات پس از فروش خودرو های سبک</option>
+        <option value="جوشکاری گاز محافظ">جوشکاری گاز محافظ</option>
+        <option value="اپراتور CNC چوب">اپراتور CNC چوب</option>
+        <option value="بازسازی مبلمان">بازسازی مبلمان</option>
+        <option value="تاسیسات گاز رسانی ساختمان">تاسیسات گاز رسانی ساختمان</option>
+        <option value="تراشکاری">تراشکاری</option>
+        <option value="تاسیسات حرارتی و برودتی">تاسیسات حرارتی و برودتی</option>
+        <option value="تاسیسات بهداشتی ساختمان">تاسیسات بهداشتی ساختمان</option>
+        <option value="تراشکاری CNC">تراشکاری CNC</option>
+        <option value="تعمیر موتور های دیزل دریایی">تعمیر موتور های دیزل دریایی</option>
+        <option value="تراشکاری و فرز کاری">تراشکاری و فرز کاری</option>
+        <option value="تعمیر موتور خودرو">تعمیر موتور خودرو</option>
+        <option value="کابینت سازی چوبی">کابینت سازی چوبی</option>
+        <option value="تعمیر موتور و برق خودرو">تعمیر موتور و برق خودرو</option>
+        <option value="فرز کاری">فرز کاری</option>
+        <option value="قالب سازی فلزی">قالب سازی فلزی</option>
+        <option value="مکانیک صنایع">مکانیک صنایع</option>
+        <option value="نقشه کشی صنعتی به کمک رایانه">نقشه کشی صنعتی به کمک رایانه</option>
+        <option value="خدمات فنی خودرو">خدمات فنی خودرو</option>
+        <option value="پلاستیک کاری">پلاستیک کاری</option>
+        <option value="تعمیر و نصب ماشین ابزار">تعمیر و نصب ماشین ابزار</option>
+        <option value="تاسیسات حرارت مرکزی">تاسیسات حرارت مرکزی</option>
+        <option value="ماشین ابزار">ماشین ابزار</option>
+        <option value="ناظر فنی چاپ">ناظر فنی چاپ</option>
+        </select><br class="sel3">
+     `)
+    }
+}
+
+// دسته گروه برق داخل صنعت داخل کار و دانش
+function ChangeDaneshBarqe1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "برنامه نویسی پایگاه داده"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygaheDadeh1(this.value)" id="select-item" class="form-select sel4 btn1">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
         <option value="دوازدهم">دوازدهم</option>
-        </select><br class="sel3">
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "برق ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBaeqeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تصویر سازی دیجیتالی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasvirsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "عیب یابی و مونتاژ سیستم های رایانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMontaj1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "ماشین های الکتریکی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlectrici1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تولید و توسعه دهنده پایگاه های اینترنتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygahEnternte1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تولید کننده چند رسانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChandResane1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "الکترونیک صنعتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshElecteronicSanate1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "برنامه نویسی بازی های رایانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazeRayanehe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "اتوماسیون صنعتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOtomaseon1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر ابزار دقیق"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbazarDaqeq1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "برق صنعتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBarqeSanate1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تولید محتوا الکترونیکی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshToledMohtava1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر دستگاه های پزشکی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDastgahPezashki1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تابلو سازی برق صنعتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTablosaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر لوازم خانگی برقی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshLavazemKhanege1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر تلفن های رومیزی و همراه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTelephone1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "سیستم های صوتی و تصویری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSestemSoti1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "طراحی و توسعه صفحات وب"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshWeb1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "نصب و سرویس آسانسور"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAsansor1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+}
+
+// دسته معماری و ساختمان داخل صنعت داخل کار ودانش
+function ChangeDaneshSakhteman1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "کار های عمومی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOmomeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "کار های فلزی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFelezeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    } 
+    else if(item == "تزیینات داخلی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    } 
+    else if(item == "نقشه کشی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDanesNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    } 
+    else if(item == "سنگ کاری و کاشی کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKashekari1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    } 
+    else if(item == "معماری آینه کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshIaenehKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    } 
+}
+
+// دسته گروه مواد داخل صنعت داخل کار و دانش
+function ChangeDaneshMavad1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "ریخته گری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRekhtegary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "آبکاری فلزات"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbkariFelezat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "نساجی عمومی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNassage1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+}
+
+// دسته گروه مکانیک داخل صنعت داخل کار و دانش
+function ChangeDaneshMecanic1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "فرز کاری CNC"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "ساخت مصنوعات فلزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhtMasnoat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "روکش کاری چوبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRokeshKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مبل سازی مدرن"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeModern1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "چاپ افست"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChapAfset1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مدلسازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshModelsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مبل سازی کلاسیک"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeCelassec1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "رنگ کاری مبلمان چوبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRangMobl1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر خودرو های تجاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirKhodroTejary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "جوشکاری برق"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryBarq1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تزیینات داخلی چوبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatChob1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "در و پنجره سازی چوبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDarAndPanjareh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "خدمات پس از فروش خودرو های سبک"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPasAzFrosh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "جوشکاری گاز محافظ"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryQaz1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "اپراتور CNC چوب"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOperatorCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "بازسازی مبلمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazsazeMobl1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تاسیسات گاز رسانی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatGaz1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تراشکاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashkary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تاسیسات حرارتی و برودتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatHararat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تاسیسات بهداشتی ساختمان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatBehdashte1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تراشکاری CNC"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKariCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر موتور های دیزل دریایی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirDizel1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تراشکاری و فرز کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKari1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر موتور خودرو"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotorKhodro1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "کابینت سازی چوبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKabinetSazi1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر موتور و برق خودرو"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotor1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "فرز کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "قالب سازی فلزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshQalebsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مکانیک صنایع"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMekanicSanaye1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "نقشه کشی صنعتی به کمک رایانه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "خدمات فنی خودرو"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamatKhodro1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "پلاستیک کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPelasticKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تعمیر و نصب ماشین ابزار"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTeamerAbzar1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "تاسیسات حرارت مرکزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatMarkaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "ماشین ابزار"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAbzar1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "ناظر فنی چاپ"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNazerChap1(this.value)" id="select-item" class="form-select sel4 btn1">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
      `)
     }
 }
