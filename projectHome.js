@@ -224,7 +224,7 @@ select.addEventListener("change",()=>{
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(select.value == "متوسطه نظری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="nazari(this.value)" id="select-item" class="form-select sel1 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="nazari(this.value)" id="select-item" class="form-select sel1 btn1 select-2">
         <option value="" selected>انتخاب کنید</option>
         <option value="ریاضی و فیزیک">ریاضی و فیزیک</option>
         <option value="علوم تجربی">علوم تجربی</option>
@@ -235,7 +235,7 @@ select.addEventListener("change",()=>{
      `)
     }
     else if(select.value == "فنی و حرفه ای"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="fani(this.value)" id="select-item" class="form-select sel1 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="fani(this.value)" id="select-item" class="form-select sel1 btn1 select-2">
         <option value="" selected>انتخاب کنید</option>
         <option value="دروس مشترک فنی و حرفه ای">دروس مشترک فنی و حرفه ای</option>
         <option value="صنعت">صنعت</option>
@@ -246,7 +246,7 @@ select.addEventListener("change",()=>{
      `)
     }
     else if(select.value == "کار و دانش"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="danesh(this.value)" id="select-item" class="form-select sel1 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="danesh(this.value)" id="select-item" class="form-select sel1 btn1 select-2">
         <option value="" selected>انتخاب کنید</option>
         <option value="دروس مشترک">دروس مشترک </option>
         <option value="صنعت">صنعت</option>
@@ -258,23 +258,22 @@ select.addEventListener("change",()=>{
     }
 })
 
-//ریاضی و فیزیک انتخاب شده
+// متوسطه نظری انتخاب شده
 function nazari(item){
     document.querySelectorAll(".sel2")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "ریاضی و فیزیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeReazi(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeReazi(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
         <option value="دوازدهم">دوازدهم</option>
-        <option value="پیش دانشگاهی">پیش دانشگاهی</option>
         </select><br class="sel2">
      `)
     }
    else if(item == "علوم تجربی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeOlomTajrobi(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeOlomTajrobi(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -284,7 +283,7 @@ function nazari(item){
      `)
     }
    else if(item == "علوم انسانی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeEnsani(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeEnsani(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -294,7 +293,7 @@ function nazari(item){
      `)
     }
     else if(item == "علوم و معارف اسلامی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="Changeislame(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="Changeislame(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -304,7 +303,7 @@ function nazari(item){
      `)
     }
     else if(item == "هنر"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeHonar(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeHonar(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="پیش دانشگاهی">پیش دانشگاهی</option>
         </select><br class="sel2">
@@ -312,13 +311,13 @@ function nazari(item){
     }
 }  
 
-// فنی و حرفه ای انتخاب شده
+// فنی و حرفه ای  انتخاب شده
 function fani(item){
     document.querySelectorAll(".sel2")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "دروس مشترک فنی و حرفه ای"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMoshtarak1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMoshtarak1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -327,7 +326,7 @@ function fani(item){
      `)
     }
    else if(item == "صنعت"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSaneat1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSaneat1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="گروه برق و رایانه">گروه برق و رایانه</option>
         <option value="گروه تعمیر و نگهداری ماشین آلات">گروه تعمیر و نگهداری ماشین آلات</option>
@@ -338,7 +337,7 @@ function fani(item){
      `)
     }
     else if(item == "خدمات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKhadamat1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKhadamat1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="گروه بازرگانی و امور اداری">گروه بازرگانی و امور اداری</option>
         <option value="گروه بهداشت و سلامت">گروه بهداشت و سلامت</option>
@@ -348,7 +347,7 @@ function fani(item){
      `)
     }
     else if(item == "کشاورزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKeshavarze1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKeshavarze1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="امور باغی">امور باغی</option>
         <option value="امور زراعی">امور زراعی</option>
@@ -359,7 +358,7 @@ function fani(item){
      `)
     }
     else if(item == "هنر"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHonar1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHonar1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="فتو-گرافیک">فتو-گرافیک</option>
         <option value="طراحی و دوخت">طراحی و دوخت</option>
@@ -390,7 +389,7 @@ function danesh(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "دروس مشترک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoshtarak1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoshtarak1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -399,7 +398,7 @@ function danesh(item){
      `)
     }
    else if(item == "صنعت"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSaneat1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSaneat1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="تعمیر و نگهداری ماشین آلات">تعمیر و نگهداری ماشین آلات</option>
         <option value="گروه برق">گروه برق </option>
@@ -410,16 +409,16 @@ function danesh(item){
      `)
     }
     else if(item == "خدمات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamat1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamat1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="خدمات">خدمات</option>
         <option value="بازرگانی و امور اداری"> بازرگانی و امور اداری</option>
-        <option value=" بهداشت و سلامت"> بهداشت و سلامت</option>
+        <option value="بهداشت و سلامت"> بهداشت و سلامت</option>
         </select><br class="sel2">
      `)
     }
     else if(item == "کشاورزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKeshavarze1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKeshavarze1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="کشت و کار مکانیزه">کشت و کار مکانیزه</option>
         <option value="پرورش پرندگان زینتی">پرورش پرندگان زینتی</option>
@@ -457,7 +456,7 @@ function danesh(item){
      `)
     }
     else if(item == "هنر"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshHonar1(this.value)" id="select-item" class="form-select sel2 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshHonar1(this.value)" id="select-item" class="form-select sel2 btn1 select-3">
         <option value="" selected>انتخاب کنید</option>
         <option value="معماری داخلی">معماری داخلی</option>
         <option value="تولید محتوا و انیمیشن">تولید محتوا و انیمیشن</option>
@@ -490,17 +489,17 @@ function danesh(item){
         <option value="منبت کاری">منبت کاری</option>
         <option value="صحافی و جلد سازی">صحافی و جلد سازی</option>
         <option value="هنر معرقکاری">هنر معرقکاری</option>
-        <option value="چاپ باتیک و سیلیک اسکرین">چاپ باتیک و سیلیک اسکرین</option>
+        <option value="چاپ باتیک و سیلک اسکرین">چاپ باتیک و سیلک اسکرین</option>
         <option value="چاپ باتیک و قلمکار">چاپ باتیک و قلمکار</option>
         <option value="چاپ دستی">چاپ دستی</option>
-        <option value="کاغد سازی">کاغد سازی</option>
+        <option value="کاغذ سازی">کاغذ سازی</option>
         <option value="آواز جهانی">آواز جهانی</option>
         <option value="آواز ایرانی">آواز ایرانی</option>
         <option value="نوازندگی ساز ایرانی">نوازندگی ساز ایرانی</option>
         <option value="تذهیب و تشعیر">تذهیب و تشعیر</option>
         <option value="نوازندگی ساز جهانی">نوازندگی ساز جهانی</option>
         <option value="نقاشی ایرانی">نقاشی ایرانی</option>
-        <option value="نگار گری">نگار گری</option>
+        <option value="نگارگری">نگارگری</option>
         <option value="چهره سازی">چهره سازی</option>
         <option value="گرافیک رایانه ای">گرافیک رایانه ای</option>
         <option value="سراجی کفش">سراجی کفش</option>
@@ -518,7 +517,7 @@ function ChangeDaneshSaneat1(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "تعمیر و نگهداری ماشین آلات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -527,7 +526,7 @@ function ChangeDaneshSaneat1(item){
      `)
     }
     else if(item == "گروه برق"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBarqe1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBarqe1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="برنامه نویسی پایگاه داده">برنامه نویسی پایگاه داده</option>
         <option value="برق ساختمان">برق ساختمان</option>
@@ -553,7 +552,7 @@ function ChangeDaneshSaneat1(item){
      `)
     }
     else if(item == "معماری و ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhteman1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhteman1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="کار های عمومی ساختمان">کار های عمومی ساختمان</option>
         <option value="کار های فلزی ساختمان">کار های فلزی ساختمان</option>
@@ -565,7 +564,7 @@ function ChangeDaneshSaneat1(item){
      `)
     }
     else if(item == "گروه مواد"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMavad1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMavad1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="ریخته گری">ریخته گری</option>
         <option value="آبکاری فلزات">آبکاری فلزات</option>
@@ -574,7 +573,7 @@ function ChangeDaneshSaneat1(item){
      `)
     }
     else if(item == "گروه مکانیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMecanic1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMecanic1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="فرز کاری CNC">فرز کاری CNC</option>
         <option value="ساخت مصنوعات فلزی">ساخت مصنوعات فلزی</option>
@@ -617,11 +616,171 @@ function ChangeDaneshSaneat1(item){
     }
 }
 
+// دسته خدمات داخل کار و دانش
+function ChangeDaneshKhadamat1(item){
+    document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "خدمات"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamat2(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="مددیاری افراد با نیاز های ویژه">مددیاری افراد با نیاز های ویژه</option>
+        <option value="هتل داری">هتل داری</option>
+        <option value="مدیریت آشپزی و قنادی">مدیریت آشپزی و قنادی</option>
+        <option value="مددیاری سالمندان">مددیاری سالمندان</option>
+        <option value="هوانوردی">هوانوردی</option>
+        <option value="راهنمای گردشگری">راهنمای گردشگری</option>
+        <option value="ایمنی و آتش نشانی">ایمنی و آتش نشانی</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "بازرگانی و امور اداری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazargani1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="حسابداری مالی">حسابداری مالی</option>
+        <option value="بورس و اوراق بهادر">بورس و اوراق بهادر</option>
+        <option value="امور اداری">امور اداری</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "بهداشت و سلامت"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBehdasht1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="مدیریت و برنامه ریزی امور خانواده">مدیریت و برنامه ریزی امور خانواده</option>
+        <option value="بهیاری">بهیاری</option>
+        </select><br class="sel3">
+     `)
+    }
+    
+}
+
+//دسته خدمات داخل خدمات داخل کار و دانش 
+function ChangeDaneshKhadamat2(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "مددیاری افراد با نیاز های ویژه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMadadyari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "هتل داری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshHotel1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مدیریت آشپزی و قنادی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshQannadi1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "مددیاری سالمندان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSalmandan1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "هوانوردی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshHavanavarde1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "راهنمای گردشگری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshGardeshgari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "ایمنی و آتش نشانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAtashNeshani1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+}
+
+// دسته بازرگانی و امور اداری داخل دسته خدمات داخل کار و دانش
+function ChangeDaneshBazargani1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "حسابداری مالی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshHesabdaryMaly1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "بورس و اوراق بهادر"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBorse1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "امور اداری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOmorEdare1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+}
+
+// دسته بهداشت و سلامت داخل خدمات داخل کار و دانش
+function ChangeDaneshBehdasht1(item){
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "مدیریت و برنامه ریزی امور خانواده"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshModereatKhanevadeh1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+    else if(item == "بهیاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBehyari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel4">
+     `)
+    }
+}
+
 // دسته گروه برق داخل صنعت داخل کار و دانش
 function ChangeDaneshBarqe1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "برنامه نویسی پایگاه داده"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygaheDadeh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygaheDadeh1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -630,7 +789,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "برق ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBaeqeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBaeqeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -639,7 +798,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تصویر سازی دیجیتالی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasvirsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasvirsaze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -648,7 +807,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "عیب یابی و مونتاژ سیستم های رایانه ای"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMontaj1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMontaj1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -657,7 +816,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "ماشین های الکتریکی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlectrici1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAlectrici1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -666,7 +825,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تولید و توسعه دهنده پایگاه های اینترنتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygahEnternte1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPaygahEnternte1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -675,7 +834,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تولید کننده چند رسانه ای"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChandResane1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChandResane1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -684,7 +843,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "الکترونیک صنعتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshElecteronicSanate1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshElecteronicSanate1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -693,7 +852,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "برنامه نویسی بازی های رایانه ای"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazeRayanehe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazeRayanehe1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -702,7 +861,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "اتوماسیون صنعتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOtomaseon1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOtomaseon1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -711,7 +870,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تعمیر ابزار دقیق"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbazarDaqeq1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbazarDaqeq1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -720,7 +879,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "برق صنعتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBarqeSanate1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBarqeSanate1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -729,7 +888,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تولید محتوا الکترونیکی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshToledMohtava1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshToledMohtava1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -738,7 +897,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تعمیر دستگاه های پزشکی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDastgahPezashki1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDastgahPezashki1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -747,7 +906,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تابلو سازی برق صنعتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTablosaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTablosaze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -756,7 +915,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تعمیر لوازم خانگی برقی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshLavazemKhanege1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshLavazemKhanege1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -765,7 +924,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "تعمیر تلفن های رومیزی و همراه"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTelephone1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTelephone1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -774,7 +933,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "سیستم های صوتی و تصویری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSestemSoti1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSestemSoti1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -783,7 +942,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "طراحی و توسعه صفحات وب"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshWeb1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshWeb1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -792,7 +951,7 @@ function ChangeDaneshBarqe1(item){
      `)
     }
     else if(item == "نصب و سرویس آسانسور"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAsansor1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAsansor1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -806,7 +965,7 @@ function ChangeDaneshBarqe1(item){
 function ChangeDaneshSakhteman1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "کار های عمومی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOmomeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOmomeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -815,7 +974,7 @@ function ChangeDaneshSakhteman1(item){
      `)
     }
     else if(item == "کار های فلزی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFelezeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFelezeSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -824,7 +983,7 @@ function ChangeDaneshSakhteman1(item){
      `)
     } 
     else if(item == "تزیینات داخلی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -833,7 +992,7 @@ function ChangeDaneshSakhteman1(item){
      `)
     } 
     else if(item == "نقشه کشی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDanesNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDanesNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -842,7 +1001,7 @@ function ChangeDaneshSakhteman1(item){
      `)
     } 
     else if(item == "سنگ کاری و کاشی کاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKashekari1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKashekari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -851,7 +1010,7 @@ function ChangeDaneshSakhteman1(item){
      `)
     } 
     else if(item == "معماری آینه کاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshIaenehKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshIaenehKary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -865,7 +1024,7 @@ function ChangeDaneshSakhteman1(item){
 function ChangeDaneshMavad1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "ریخته گری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRekhtegary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRekhtegary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -874,7 +1033,7 @@ function ChangeDaneshMavad1(item){
      `)
     }
     else if(item == "آبکاری فلزات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbkariFelezat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshAbkariFelezat1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -883,7 +1042,7 @@ function ChangeDaneshMavad1(item){
      `)
     }
     else if(item == "نساجی عمومی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNassage1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNassage1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -897,7 +1056,7 @@ function ChangeDaneshMavad1(item){
 function ChangeDaneshMecanic1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "فرز کاری CNC"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzCNC1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -906,7 +1065,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "ساخت مصنوعات فلزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhtMasnoat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshSakhtMasnoat1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -915,7 +1074,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "روکش کاری چوبی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRokeshKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRokeshKary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -924,7 +1083,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "مبل سازی مدرن"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeModern1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeModern1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -933,7 +1092,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "چاپ افست"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChapAfset1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshChapAfset1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -942,7 +1101,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "مدلسازی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshModelsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshModelsaze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -951,7 +1110,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "مبل سازی کلاسیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeCelassec1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMoblsazeCelassec1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -960,7 +1119,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "رنگ کاری مبلمان چوبی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRangMobl1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshRangMobl1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -969,7 +1128,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تعمیر خودرو های تجاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirKhodroTejary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirKhodroTejary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -978,7 +1137,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "جوشکاری برق"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryBarq1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryBarq1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -987,7 +1146,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تزیینات داخلی چوبی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatChob1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTazeenatChob1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -996,7 +1155,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "در و پنجره سازی چوبی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDarAndPanjareh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshDarAndPanjareh1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1005,7 +1164,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "خدمات پس از فروش خودرو های سبک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPasAzFrosh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPasAzFrosh1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1014,7 +1173,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "جوشکاری گاز محافظ"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryQaz1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshJoshkaryQaz1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1023,7 +1182,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "اپراتور CNC چوب"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOperatorCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshOperatorCNC1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1032,7 +1191,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "بازسازی مبلمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazsazeMobl1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshBazsazeMobl1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1041,7 +1200,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تاسیسات گاز رسانی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatGaz1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatGaz1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1050,7 +1209,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تراشکاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashkary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashkary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1059,7 +1218,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تاسیسات حرارتی و برودتی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatHararat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatHararat1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1068,7 +1227,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تاسیسات بهداشتی ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatBehdashte1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatBehdashte1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1077,7 +1236,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تراشکاری CNC"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKariCNC1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKariCNC1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1086,7 +1245,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تعمیر موتور های دیزل دریایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirDizel1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirDizel1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1095,7 +1254,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تراشکاری و فرز کاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKari1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTarashKari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1104,7 +1263,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تعمیر موتور خودرو"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotorKhodro1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotorKhodro1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1113,7 +1272,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "کابینت سازی چوبی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKabinetSazi1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKabinetSazi1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1122,7 +1281,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تعمیر موتور و برق خودرو"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotor1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTamirMotor1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1131,7 +1290,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "فرز کاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshFerzKary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1140,7 +1299,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "قالب سازی فلزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshQalebsaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshQalebsaze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1149,7 +1308,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "مکانیک صنایع"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMekanicSanaye1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMekanicSanaye1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1158,7 +1317,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "نقشه کشی صنعتی به کمک رایانه"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNaqsheKeshe1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1167,7 +1326,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "خدمات فنی خودرو"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamatKhodro1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshKhadamatKhodro1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1176,7 +1335,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "پلاستیک کاری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPelasticKary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshPelasticKary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1185,7 +1344,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تعمیر و نصب ماشین ابزار"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTeamerAbzar1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTeamerAbzar1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1194,7 +1353,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "تاسیسات حرارت مرکزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatMarkaze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshTasesatMarkaze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1203,7 +1362,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "ماشین ابزار"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAbzar1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshMashenAbzar1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1212,7 +1371,7 @@ function ChangeDaneshMecanic1(item){
      `)
     }
     else if(item == "ناظر فنی چاپ"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNazerChap1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeDaneshNazerChap1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1222,12 +1381,765 @@ function ChangeDaneshMecanic1(item){
     }
 }
 
+// دسته کشاورزی داخل کارو دانش
+function ChangeDaneshKeshavarze1(item){
+    document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "کشت و کار مکانیزه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش پرندگان زینتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تعمیر ماشین های ثابت کشاورزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تعمیر موتور های سبک کشاورزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تعمیر سیستم انتقال نیرو و هیدرولیک تراکتور"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "ایجاد و نگهداری فضای سبز"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تکثیر ماهیان گرم آبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش صنعتی دام های سنگین(گاو و گاومیش)"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش صنعتی دام های سبک (گوسفند و بز)"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش درختان گرم سیر و نیمه گرم سیر"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش وتولیدات زنبور عسل و کرم ابریشم"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش و نگهداری اسب"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش میگو"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش ماکیان"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "مکانیک تراکتور و تیلر"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "دریانوردی صیادی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش و تکثیر ماهیان سرد آبی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تکثیر میگو"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "زراعت گیاهان علوفه ای و غده ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "مرغ داری صنعتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "کشت گیاهان دارویی و زعفران"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش گیاهان جالیزی و سبزی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تولید نهال و جنگل کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش درخت و درختچه زینتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش گل و گیاهان آپارتمانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش قارچ خوراکی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش میوه های دانه دار و دانه ریز"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "زراعت غلات و حبوبات"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "پرورش میوه های هسته دار"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تولید صنعتی فراورده های لبنی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تولید فراورده های گوشتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "فرآوری آبزیان و تولید کنسرو فرآورده های گوشتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+}
+
+// دسته هنر داخل کار و دانش
+function ChangeDaneshHonar1(item){
+    document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
+    document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
+    if(item == "معماری داخلی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تولید محتوا و انیمیشن"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "گرافیک رایانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تصویر برداری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تصویر سازی و جلوه های ویژه رایانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "دستیاری طراحی لباس"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "صفحه آرایی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خیاطی لباس زنانه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "طراحی بسته بندی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خیاطی لباس شب و عروس"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "طراحی طلا و جواهر"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خیاطی لباس مردانه"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "عکاسی دیجیتال"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "دوخت لباس های محلی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "دستیاری تهیه لباس های نمایشی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "هنر فرش"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "طراحی و نقاشی فرش"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "عکاسی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "سفال و لعاب"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "سفالگری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "کاشی سازی هفت رنگ"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تراش سنگ های قیمتی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تراش و تزیین شیشه و کریستال"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خاتم سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خاتم کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "ساز سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "طلا و جواهر سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "قلمزنی روی فلز"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "منبت کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "صحافی و جلد سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "هنر معرقکاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "چاپ باتیک و سیلک اسکرین"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "چاپ باتیک و قلمکار"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "چاپ دستی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "کاغذ سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "آواز جهانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "آواز ایرانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "نوازندگی ساز ایرانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "تذهیب و تشعیر"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "نوازندگی ساز جهانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "نقاشی ایرانی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "نگارگری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "چهره سازی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "گرافیک رایانه ای"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "سراجی کفش"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "معرق کاشی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "مدیریت آشپزی و قنادی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "خیاطی دوخت های تزیینی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "هنر آیینه کاری"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+    else if(item == "سراجی"){
+        parentSelect.insertAdjacentHTML("beforeend",`<select id="select-item" class="form-select sel3 btn1 select-4">
+        <option value="" selected>انتخاب کنید</option>
+        <option value="دهم">دهم</option>
+        <option value="یازدهم">یازدهم</option>
+        <option value="دوازدهم">دوازدهم</option>
+        </select><br class="sel3">
+     `)
+    }
+}
+
+
+
+
 // دسته صنعت داخل فنی و حرفه ای
 function ChangeFaniSaneat1(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "گروه برق و رایانه"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFanibarg1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFanibarg1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="الکتروتکنیک">الکتروتکنیک</option>
         <option value="الکترونیک">الکترونیک</option>
@@ -1237,14 +2149,14 @@ function ChangeFaniSaneat1(item){
      `)
     }
    else if(item == "گروه تعمیر و نگهداری ماشین آلات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMashenAlat1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="مکانیک موتور های دریایی">مکانیک موتور های دریایی</option>
         </select><br class="sel3">
      `)
     }
    else if(item == "گروه معماری و ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeSakhteman1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeSakhteman1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="ساختمان">ساختمان</option>
         <option value="نقشه برداری">نقشه برداری</option>
@@ -1252,7 +2164,7 @@ function ChangeFaniSaneat1(item){
      `)
     }
    else if(item == "گروه مواد و فراوری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMavad1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMavad1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سرامیک">سرامیک</option>
         <option value="صنایع شیمیایی">صنایع شیمیایی</option>
@@ -1263,7 +2175,7 @@ function ChangeFaniSaneat1(item){
      `)
     }
     else if(item == "گروه مکانیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMecanic1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeMecanic1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="مکاترونیک">مکاترونیک</option>
         <option value="صنایع فلزی">صنایع فلزی</option>
@@ -1287,14 +2199,14 @@ function ChangeFaniKhadamat1(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "گروه بازرگانی و امور اداری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBazargani1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBazargani1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="حسابداری">حسابداری</option>
         </select><br class="sel3">
      `)
     }
    else if(item == "گروه بهداشت و سلامت"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBehdasht1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBehdasht1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="تربیت کودک">تربیت کودک</option>
         <option value="تربیت بدنی">تربیت بدنی</option>
@@ -1302,7 +2214,7 @@ function ChangeFaniKhadamat1(item){
      `)
     }
    else if(item == "گروه خدمات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKhadamat2(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniKhadamat2(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="حمل و نقل">حمل و نقل</option>
         <option value="ناوبری">ناوبری</option>
@@ -1310,7 +2222,7 @@ function ChangeFaniKhadamat1(item){
      `)
     }
    else if(item == "گروه مدیریت خانواده"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFanikhanevadeh1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFanikhanevadeh1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="مدیریت خانواده">مدیریت خانواده</option>
         </select><br class="sel3">
@@ -1323,7 +2235,7 @@ function ChangeFaniKeshavarze1(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "امور باغی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBage1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBage1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1332,7 +2244,7 @@ function ChangeFaniKeshavarze1(item){
      `)
     }
    else if(item == "امور زراعی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniZeraee1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniZeraee1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1341,7 +2253,7 @@ function ChangeFaniKeshavarze1(item){
      `)
     }
    else if(item == "امور دامی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniDame1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniDame1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1350,7 +2262,7 @@ function ChangeFaniKeshavarze1(item){
      `)
     }
    else if(item == "ماشین های کشاورزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMashenKeshavarxe1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMashenKeshavarxe1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1359,7 +2271,7 @@ function ChangeFaniKeshavarze1(item){
      `)
     }
    else if(item == "صنایع غذایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniGazaee1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniGazaee1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1374,7 +2286,7 @@ function ChangeFaniHonar1(item){
     document.querySelectorAll(".sel3")?.forEach(o=>o.remove());
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "فتو-گرافیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniFoto1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniFoto1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1383,7 +2295,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "طراحی و دوخت"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniDokht1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniDokht1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1392,7 +2304,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "معماری داخلی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMemariDakhele1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMemariDakhele1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1401,7 +2313,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "صنایع دستی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSanaeeDasti1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSanaeeDasti1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1410,7 +2322,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "انیمیشن(پویانمایی)"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAnimation1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAnimation1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1419,7 +2331,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "تولید برنامه تلویزیونی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBarnamehTV1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniBarnamehTV1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1428,7 +2340,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "گرافیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniGerafic1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniGerafic1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1437,7 +2349,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "نقاشی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagashe1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagashe1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1446,7 +2358,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "موسیقی نوازندگی ساز جهانی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMosegeJahane1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMosegeJahane1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1455,7 +2367,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "موسیقی نوازندگی ساز ایرانی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMosegeIrani1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMosegeIrani1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1464,7 +2376,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "نمایش"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNamaesh1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNamaesh1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1473,7 +2385,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "سینما"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSenema1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSenema1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1482,7 +2394,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "نقشه کشی معماری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheKeshe1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheKeshe1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1491,14 +2403,14 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "طراحی زبان بصری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniZabanBasari1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniZabanBasari1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         </select><br class="sel3">
      `)
     }
     else if(item == "مرمت آثار فرهنگی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAsarFarhange1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAsarFarhange1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1506,7 +2418,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "موسیقی مبانی آهنگ سازی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAhangSaze1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniAhangSaze1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1514,7 +2426,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "پشتیبانی صحنه"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniPoshtebani1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniPoshtebani1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1522,7 +2434,7 @@ function ChangeFaniHonar1(item){
      `)
     }
     else if(item == "چاپ دستی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChapDaste1(this.value)" id="select-item" class="form-select sel3 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChapDaste1(this.value)" id="select-item" class="form-select sel3 btn1 select-4">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1535,7 +2447,7 @@ function ChangeFaniHonar1(item){
 function ChangeFanibarg1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "الکتروتکنیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniElecteroteknic1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniElecteroteknic1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1544,7 +2456,7 @@ function ChangeFanibarg1(item){
      `)
     }
     else if(item == "الکترونیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniElecteronic1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniElecteronic1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1553,7 +2465,7 @@ function ChangeFanibarg1(item){
      `)
     }
     else if(item == "شبکه و نرم افزار رایانه"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniShabake1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniShabake1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1562,7 +2474,7 @@ function ChangeFanibarg1(item){
      `)
     }
     else if(item == "الکترونیک و مخابرات دریایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMokhaberatDaryaye1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMokhaberatDaryaye1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1576,7 +2488,7 @@ function ChangeFanibarg1(item){
 function ChangeMashenAlat1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "مکانیک موتور های دریایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicMotorDaryaye1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicMotorDaryaye1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1590,7 +2502,7 @@ function ChangeMashenAlat1(item){
 function ChangeSakhteman1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "ساختمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSakhteman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1599,7 +2511,7 @@ function ChangeSakhteman1(item){
      `)
     }
     else if(item == "نقشه برداری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheBardare1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheBardare1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1612,7 +2524,7 @@ function ChangeSakhteman1(item){
 function ChangeMavad1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "سرامیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSeramic1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSeramic1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1621,7 +2533,7 @@ function ChangeMavad1(item){
      `)
     }
     else if(item == "صنایع شیمیایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniShemeaye1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniShemeaye1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1630,7 +2542,7 @@ function ChangeMavad1(item){
      `)
     }
     else if(item == "صنایع نساجی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNasaje1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNasaje1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1639,7 +2551,7 @@ function ChangeMavad1(item){
      `)
     }
     else if(item == "متالورژی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMetalorje1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMetalorje1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1648,7 +2560,7 @@ function ChangeMavad1(item){
      `)
     }
     else if(item == "معدن"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMadan1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMadan1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1662,7 +2574,7 @@ function ChangeMavad1(item){
 function ChangeMecanic1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "مکاترونیک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMekateronic1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMekateronic1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1671,7 +2583,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "صنایع فلزی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniFeleze1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniFeleze1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1680,7 +2592,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "تاسیسات مکانیکی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTasesatMecanici1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTasesatMecanici1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1689,7 +2601,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "مکانیک موتور های دریایی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicMotorDaryaye2(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicMotorDaryaye2(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1698,7 +2610,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "مکانیک خودرو"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicKhodro1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMecanicKhodro1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1707,7 +2619,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "ماشین ابزار"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMashenAbzar1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMashenAbzar1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1716,7 +2628,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "صنایع چوب و مبلمان"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMobleman1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniMobleman1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1725,7 +2637,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "چاپ"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChap1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChap1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1734,7 +2646,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "تاسیسات"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTasesat1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTasesat1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1742,7 +2654,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "صنایع چوب و کاغذ"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChobAndKagaz1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniChobAndKagaz1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1750,7 +2662,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "ساخت و تولید"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSakhtAndToled1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniSakhtAndToled1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1758,7 +2670,7 @@ function ChangeMecanic1(item){
      `)
     }
     else if(item == "نقشه کشی عمومی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheOmome1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNagsheOmome1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1771,7 +2683,7 @@ function ChangeMecanic1(item){
 function ChangeFaniBazargani1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "حسابداری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHesabdari1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHesabdari1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1785,7 +2697,7 @@ function ChangeFaniBazargani1(item){
 function ChangeFaniBehdasht1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "تربیت کودک"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTarbeatKodak1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTarbeatKodak1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1794,7 +2706,7 @@ function ChangeFaniBehdasht1(item){
      `)
     }
     else if(item == "تربیت بدنی"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTarbeatBadani1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniTarbeatBadani1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1808,7 +2720,7 @@ function ChangeFaniBehdasht1(item){
 function ChangeFaniKhadamat2(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "حمل و نقل"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHamlAndNaql1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniHamlAndNaql1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1817,7 +2729,7 @@ function ChangeFaniKhadamat2(item){
      `)
     }
     else if(item == "ناوبری"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNavbary1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniNavbary1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="دهم">دهم</option>
         <option value="یازدهم">یازدهم</option>
@@ -1831,7 +2743,7 @@ function ChangeFaniKhadamat2(item){
 function ChangeFanikhanevadeh1(item){
     document.querySelectorAll(".sel4")?.forEach(o=>o.remove());
     if(item == "مدیریت خانواده"){
-        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniModereatKhanevadeh1(this.value)" id="select-item" class="form-select sel4 btn1">
+        parentSelect.insertAdjacentHTML("beforeend",`<select onchange="ChangeFaniModereatKhanevadeh1(this.value)" id="select-item" class="form-select sel4 btn1 select-5">
         <option value="" selected>انتخاب کنید</option>
         <option value="سال دوم">سال دوم</option>
         <option value="سال سوم">سال سوم</option>
@@ -1839,6 +2751,8 @@ function ChangeFanikhanevadeh1(item){
      `)
     }
 }
+
+
 
 //ساخت و نمایش آلرت دانلود
 function downloadItem(){
